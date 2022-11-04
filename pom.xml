@@ -4,7 +4,7 @@
 
     <groupId>cts</groupId>
     <artifactId>rentaCar</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <packaging>war</packaging>
 
     <name>rentaCar</name>
@@ -21,7 +21,25 @@
             <version>7.0</version>
             <scope>provided</scope>
         </dependency>
+        
+        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.46</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.9.0</version>
+            <type>jar</type>
+        </dependency>
+
+
     </dependencies>
+    
+  
 
     <build>
         <plugins>

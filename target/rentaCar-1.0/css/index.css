@@ -1,0 +1,20 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 12/09/2022, 8:11:26 a. m.
+    Author     : Maria Jose
+*/
+
+.bg-login-image{
+    background: url("../img/bg-login.jpg");
+    background-position: center;
+    background-size: cover;
+    border: 0px;
+}
+
+.sizeDiv{
+    width: 40vw;
+}
+
