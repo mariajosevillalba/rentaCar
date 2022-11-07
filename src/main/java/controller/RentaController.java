@@ -1,37 +1,31 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package controller;
 
-import beans.renta;
-import com.google.gson.Gson;
-import connection.DBConnection;
 import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
+
 import java.util.List;
 
-/**
- *
- * @author Maria Jose
- */
+import com.google.gson.Gson;
+
+import beans.Renta;
+import connection.DBConnection;
+
 public class RentaController implements IRentaController {
 
-   
     @Override
     public String listarRentas(String username) {
-       
+
         Gson gson = new Gson();
 
         DBConnection con = new DBConnection();
 
-        String sql = "Select l.id, l.marca, l.modelo, l.novedad, a.fecha from vehiculos l "
+        String sql = "Select l.id, l.titulo, l.genero, l.novedad, a.fecha from vehiculos l "
                 + "inner join renta a on l.id = a.id inner join usuarios u on a.username = u.username "
                 + "where a.username = '" + username + "'";
 
-        List<String> alquileres = new ArrayList<String>();
+        List<String> rentas = new ArrayList<String>();
 
         try {
 
@@ -40,21 +34,20 @@ public class RentaController implements IRentaController {
 
             while (rs.next()) {
                 int id = rs.getInt("id");
-                String marca = rs.getString("marca");
-                String modelo = rs.getString("modelo");
+                String titulo = rs.getString("titulo");
+                String genero = rs.getString("genero");
                 boolean novedad = rs.getBoolean("novedad");
-                Date fechaAlquiler = rs.getDate("fecha");
+                Date fechaRenta = rs.getDate("fecha");
 
-                renta alquiler = new renta(id, fechaAlquiler, novedad, modelo, marca);
+                Renta renta = new Renta(id, fechaRenta, novedad, genero, titulo);
 
-                alquileres.add(gson.toJson(alquiler));
+                rentas.add(gson.toJson(renta));
             }
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
         } finally {
             con.desconectar();
         }
-        return gson.toJson(alquileres);
-    
-    }  
+        return gson.toJson(rentas);
+    }
 }

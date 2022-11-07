@@ -1,12 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package controller;
 
-import beans.vehiculos;
-import com.google.gson.Gson;
-import connection.DBConnection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.sql.Timestamp;
@@ -14,10 +7,10 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-/**
- *
- * @author Maria Jose
- */
+import com.google.gson.Gson;
+import beans.Vehiculos;
+import connection.DBConnection;
+
 public class VehiculosController implements IVehiculosController {
 
     @Override
@@ -32,7 +25,7 @@ public class VehiculosController implements IVehiculosController {
             sql += " order by modelo " + orden;
         }
 
-        List<String> vehiculoss = new ArrayList<String>();
+        List<String> vehiculos = new ArrayList<String>();
 
         try {
 
@@ -48,9 +41,9 @@ public class VehiculosController implements IVehiculosController {
                 int disponibles = rs.getInt("disponibles");
                 boolean novedad = rs.getBoolean("novedad");
 
-                vehiculos vehiculo = new vehiculos(id, marca, modelo, anio, disponibles, novedad);
+                Vehiculos vehiculo = new Vehiculos(id, marca, modelo, anio, disponibles, novedad);
 
-                vehiculoss.add(gson.toJson(vehiculo));
+                vehiculos.add(gson.toJson(vehiculo));
 
             }
         } catch (Exception ex) {
@@ -59,12 +52,12 @@ public class VehiculosController implements IVehiculosController {
             con.desconectar();
         }
 
-        return gson.toJson(vehiculoss);
+        return gson.toJson(vehiculos);
 
     }
 
     @Override
-    public String renta(int id, String username) {
+    public String rentar(int id, String username) {
 
         Timestamp fecha = new Timestamp(new Date().getTime());
         DBConnection con = new DBConnection();
