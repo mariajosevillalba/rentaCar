@@ -84,20 +84,20 @@ function getRentadas(username) {
 function mostrarHistorial(vehiculos) {
     let contenido = "";
     if (vehiculos.length >= 1) {
-        $.each(vehiculos, function (index, vehiculo) {
-            vehiculo = JSON.parse(vehiculo);
+        $.each(vehiculos, function (index, vehiculos) {
+            vehiculos = JSON.parse(vehiculos);
 
-            contenido += '<tr><th scope="row">' + vehiculo.id + '</th>' +
-                    '<td>' + vehiculo.marca + '</td>' +
-                    '<td>' + vehiculo.modelo + '</td>' +
-                    '<td><input type="checkbox" name="novedad" id="novedad' + vehiculo.id
+            contenido += '<tr><th scope="row">' + vehiculos.id + '</th>' +
+                    '<td>' + vehiculos.marca + '</td>' +
+                    '<td>' + vehiculos.modelo + '</td>' +
+                    '<td><input type="checkbox" name="novedad" id="novedad' + vehiculos.id
                     + '" disabled ';
-            if (vehiculo.novedad) {
+            if (vehiculos.novedad) {
                 contenido += 'checked'
             }
-            contenido += '></td><td>' + vehiculo.fechaRenta + '</td>' +
-                    '<td><button id="devolver-btn" onclick= "devolverVehiculo(' + vehiculo.id
-                    + ');" class="btn btn-danger">Devolver vehiculo</button></td></tr>';
+            contenido += '></td><td>' + vehiculos.fechaRenta + '</td>' +
+                    '<td><button id="devolver-btn" onclick= "devolverVehiculo(' + vehiculos.id
+                    + ');" class="btn btn-danger">Devolver vehiculos</button></td></tr>';
 
         });
         $("#historial-tbody").html(contenido);

@@ -1,28 +1,20 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package beans;
 
-/**
- *
- * @author Maria Jose
- */
-public class vehiculos {
-    
+public class Vehiculos {
     private int id;
     private String marca;
     private String modelo;
     private String anio;
-    private int disponible;
+    private int disponibles;
     private boolean novedad;
 
-    public vehiculos(int id, String marca, String modelo, String anio, int disponible, boolean novedad) {
+    public Vehiculos(int id, String marca, String modelo, String anio, int disponibles, boolean novedad) {
         this.id = id;
         this.marca = marca;
         this.modelo = modelo;
         this.anio = anio;
-        this.disponible = disponible;
+        this.disponibles = disponibles;
         this.novedad = novedad;
     }
 
@@ -58,12 +50,12 @@ public class vehiculos {
         this.anio = anio;
     }
 
-    public int getDisponible() {
-        return disponible;
+    public int getDisponibles() {
+        return disponibles;
     }
 
-    public void setDisponible(int disponible) {
-        this.disponible = disponible;
+    public void setDisponibles(int disponibles) {
+        this.disponibles = disponibles;
     }
 
     public boolean isNovedad() {
@@ -76,7 +68,9 @@ public class vehiculos {
 
     @Override
     public String toString() {
-        return "vehiculos{" + "id=" + id + ", marca=" + marca + ", modelo=" + modelo + ", anio=" + anio + ", disponible=" + disponible + ", novedad=" + novedad + '}';
+        return "Vehiculos{" + "id=" + id + ", marca=" + marca + ", modelo=" + modelo 
+                + ", anio=" + anio + ", disponibles=" + disponibles + ", novedad=" + novedad + '}';
     }
-     
+
+   
 }

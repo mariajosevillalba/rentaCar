@@ -69,6 +69,16 @@ public class Renta {
         this.modelo = modelo;
     }
 
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+    
+    
+
     @Override
     public String toString() {
         return "Renta{" + "id=" + id + ", username=" + username + ", fechaRenta=" + fechaRenta + ", novedad=" + novedad + ", modelo=" + modelo + '}';

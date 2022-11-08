@@ -76,15 +76,15 @@ function mostrarVehiculos(vehiculos) {
             if (user.premium) {
 
                 if (vehiculo.novedad) {
-                    precio = (20000 - (20000 * 0.1));
+                    precio = (90000 - (90000 * 0.1));
                 } else {
-                    precio = (10000 - (10000 * 0.1));
+                    precio = (70000 - (70000 * 0.1));
                 }
             } else {
                 if (vehiculo.novedad) {
-                    precio = 20000;
+                    precio = 90000;
                 } else {
-                    precio = 10000;
+                    precio = 70000;
                 }
             }
 
