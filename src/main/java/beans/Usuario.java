@@ -1,15 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package beans;
 
-/**
- *
- * @author Maria Jose
- */
-public class usuarios {
-    
+public class Usuario {
     private String username;
     private String contrasena;
     private String nombre;
@@ -18,7 +10,7 @@ public class usuarios {
     private double saldo;
     private boolean premium;
 
-    public usuarios(String username, String contrasena, String nombre, String apellidos, String email, double saldo, boolean premium) {
+    public Usuario(String username, String contrasena, String nombre, String apellidos, String email, double saldo, boolean premium) {
         this.username = username;
         this.contrasena = contrasena;
         this.nombre = nombre;
@@ -86,7 +78,8 @@ public class usuarios {
 
     @Override
     public String toString() {
-        return "usuarios{" + "username=" + username + ", contrasena=" + contrasena + ", nombre=" + nombre + ", apellidos=" + apellidos + ", email=" + email + ", saldo=" + saldo + ", premium=" + premium + '}';
+        return "Usuario{" + "username=" + username + ", contrasena=" + contrasena + ", nombre=" + nombre + ", apellidos=" + apellidos + ", email=" + email + ", saldo=" + saldo + ", premium=" + premium + '}';
     }
     
-}
+    
+}   

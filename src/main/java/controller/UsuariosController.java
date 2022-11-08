@@ -1,22 +1,14 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package controller;
 
-import beans.usuarios;
-import beans.vehiculos;
-import com.google.gson.Gson;
-import connection.DBConnection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- *
- * @author Maria Jose
- */
+import com.google.gson.Gson;
+import beans.Usuario;
+import connection.DBConnection;
+
 public class UsuariosController implements IUsuariosController {
 
     @Override
@@ -39,8 +31,8 @@ public class UsuariosController implements IUsuariosController {
                 double saldo = rs.getDouble("saldo");
                 boolean premium = rs.getBoolean("premium");
 
-                usuarios usuario
-                        = new usuarios(username, contrasena, nombre, apellidos, email, saldo, premium);
+                Usuario usuario
+                        = new Usuario(username, contrasena, nombre, apellidos, email, saldo, premium);
                 return gson.toJson(usuario);
             }
         } catch (Exception ex) {
@@ -66,7 +58,7 @@ public class UsuariosController implements IUsuariosController {
             Statement st = con.getConnection().createStatement();
             st.executeUpdate(sql);
 
-            usuarios usuario = new usuarios(username, contrasena, nombre, apellidos, email, saldo, premium);
+            Usuario usuario = new Usuario(username, contrasena, nombre, apellidos, email, saldo, premium);
 
             st.close();
 
@@ -103,7 +95,7 @@ public class UsuariosController implements IUsuariosController {
                 double saldo = rs.getDouble("saldo");
                 boolean premium = rs.getBoolean("premium");
 
-                usuarios usuario = new usuarios(username, contrasena,
+                Usuario usuario = new Usuario(username, contrasena,
                         nombre, apellidos, email, saldo, premium);
 
                 return gson.toJson(usuario);
@@ -121,7 +113,8 @@ public class UsuariosController implements IUsuariosController {
     public String restarDinero(String username, double nuevoSaldo) {
 
         DBConnection con = new DBConnection();
-        String sql = "Update usuarios set saldo = " + nuevoSaldo + " where username = '" + username + "'";
+        String sql = "Update usuarios set saldo = " + nuevoSaldo + 
+                " where username = '" + username + "'";
 
         try {
 
@@ -214,9 +207,9 @@ public class UsuariosController implements IUsuariosController {
         DBConnection con = new DBConnection();
 
         try {
-            for (Map.Entry<Integer, Integer> vehiculos : disponibles.entrySet()) {
-                int id = vehiculos.getKey();
-                int num_disponibles = vehiculos.getValue();
+            for (Map.Entry<Integer, Integer> vehiculo : disponibles.entrySet()) {
+                int id = vehiculo.getKey();
+                int num_disponibles = vehiculo.getValue();
 
                 String sql = "Update vehiculos set disponibles = (Select disponibles + " + num_disponibles +
                         " from vehiculos where id = " + id + ") where id = " + id;
@@ -256,6 +249,5 @@ public class UsuariosController implements IUsuariosController {
 
         return "false";
     }
-    
-    
 }
+

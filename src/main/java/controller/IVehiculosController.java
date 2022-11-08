@@ -12,7 +12,7 @@ public interface IVehiculosController {
     
     public String listar(boolean ordenar, String orden);
 
-    public String renta(int id, String username);
+    public String rentar(int id, String username);
 
     public String modificar(int id);
 
