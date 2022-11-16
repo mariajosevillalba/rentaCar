@@ -44,6 +44,24 @@ Si no contamos con un usuario, debemos registrarnos dando clic en el botón de r
 ![enter image description here](https://lh3.googleusercontent.com/s-TGqU4i4LPNpxvCsKqeFvsGKtToUjKyGdVC0K3ZFMgXpY3--ZBUic7IXTML1Q3S5RliJAPtf352IYkQX2GeDXr8ExW6uTmK9IG6kaHGkZfON12my3uB_qwuq_yULuM618OcvmOeoVo1lvbIFXqQyeIGKgzGzaNsmMD8SKq-Iz15IMlQEWnWPdsWTp2hkHw5JzB-9LI7ZJWWgq7VoRuN46gQhIy2MVjpt7Z2rrrVntN3ISAzx32vgh8j9DmZPSh1-xqid2s2Wc7dgpPBX0Cw7C_ysLBNZBTk6ONZL7pF4GJjddr0gSNcBPru3B5tPuPL7GSaN9jf52CTM-ASV9vhMI_7MP-DvNfrbKdyzkh8aug_WvfjqSYPwDBchK6OmJdBYalJX_pNSTx8KQyj39vkMowOSnB2PNWSA2SvmWPkcd2wcgVQ-DlbUpjZQVpA4RXgm7xSzt2rdg8o05G5c9zSOANVrutFPYaZbQdTuBvQB11yoGpgo-GWzp6PYipAGzxjU_aG-JNnMSQEpInwmuZWWry8qnfM0Do169PsqohXBPFdDQzi8M9o6X-atE5AkW-0N1-v_70NbkOAgj4webjSmy-7gfoa1FHJpaPZiu_Yq4pYpnQLSwpFV6EfG2BSH2KVvrpYoyGj2W4wq8JWzkPbr-cK5f4DTy6_lV6Xv4MWJoV0DmlFT2C2iLyMLQy4KNr5tapygw6ja8rf1Q9PnH68o2SUFNtGg1SDAz5MD3lpaDOYbzyiMBnuTBg1nbhiDqV85cZA98qh2qWx1khTZIQxFfheiHt8PJPxGVzDXQIn_p_lME80Tn04vR3yb5bw2CvGeZ3g8gkhMtGXeUJz-Imtv8fVHzGPe62Ry8T8Y-5DbnjisTOUr5UIk-SqUHksE4nTenFOXzMBIi0z76qL597V8wlDLOEZjlkU6P_odVKDojFuiTd_dnZzPtgr4U3mFkAMo_R67Y_bVu8_y0xr5Pcp=w769-h570-no?authuser=0)
 
 
+## Requerimientos funcionales
+
+Para comprobar el correcto funcionamiento de la app es necesario cumplir con los requerimientos funcionales estipulados para nuestra aplicación RentaCar
+
+|     #Requerimiento Funcional           |                        Descripción                    
+|----------------|-------------------------------|-----------------------------|
+|**R.F 1**|La app deberá permitir el inicio de sesión con un usuario y contraseña registrados en la base de datos.           |
+|**R.F 2**       |La app deberá permitir el registro de usuarios desde la misma página web.          |
+|**R.F 3**          |La app debe mostrar el listado de vehículos disponibles para rentar con sus características y precios al usuario.|
+|**R.F 4**|Debe ser posible para el usuario rentar a voluntad el vehículo que desee siempre y cuando cuente con el monto suficiente para realizar el trámite y llevar un historial de autos rentados.            |
+|**R.F 5**          |Se hace necesario que el usuario pueda devolver el vehículo cuando lo requiera.            |
+|**R.F 6**          |La app debe permitir que cuando se devuelva un vehículo rentado, el número de unidades disponibles regrese a su estado inicial.|
+|**R.F 7**|La app deberá descontar dinero del saldo de cada usuario al momento de rentar un vehículo mas no retornarlo a la hora de devolver el vehículo.           |
+|**R.F 8**          |La app deberá decrementar en 1 el número de autos disponibles por cada vez que un usuario rente el mismo vehículo.           |
+|**R.F 9**          |La app debe permitir visualizar el perfil y la realización de modificaciones en los datos personales del usuario.|
+|**R.F 10**          |La app deberá permitir el cierre de sesión sin que se borren las acciones sin que se borre el historial de vehículos rentados por cada usuario.|
+
+
 ## Autores
 
 María José Villalba
