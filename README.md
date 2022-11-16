@@ -48,18 +48,9 @@ Si no contamos con un usuario, debemos registrarnos dando clic en el botón de r
 
 Para comprobar el correcto funcionamiento de la app es necesario cumplir con los requerimientos funcionales estipulados para nuestra aplicación RentaCar
 
-|     #Requerimiento Funcional           |                        Descripción                    
-|----------------|-------------------------------|-----------------------------|
-|**R.F 1**|La app deberá permitir el inicio de sesión con un usuario y contraseña registrados en la base de datos.           |
-|**R.F 2**       |La app deberá permitir el registro de usuarios desde la misma página web.          |
-|**R.F 3**          |La app debe mostrar el listado de vehículos disponibles para rentar con sus características y precios al usuario.|
-|**R.F 4**|Debe ser posible para el usuario rentar a voluntad el vehículo que desee siempre y cuando cuente con el monto suficiente para realizar el trámite y llevar un historial de autos rentados.            |
-|**R.F 5**          |Se hace necesario que el usuario pueda devolver el vehículo cuando lo requiera.            |
-|**R.F 6**          |La app debe permitir que cuando se devuelva un vehículo rentado, el número de unidades disponibles regrese a su estado inicial.|
-|**R.F 7**|La app deberá descontar dinero del saldo de cada usuario al momento de rentar un vehículo mas no retornarlo a la hora de devolver el vehículo.           |
-|**R.F 8**          |La app deberá decrementar en 1 el número de autos disponibles por cada vez que un usuario rente el mismo vehículo.           |
-|**R.F 9**          |La app debe permitir visualizar el perfil y la realización de modificaciones en los datos personales del usuario.|
-|**R.F 10**          |La app deberá permitir el cierre de sesión sin que se borren las acciones sin que se borre el historial de vehículos rentados por cada usuario.|
+![enter image description here](https://lh3.googleusercontent.com/QOWZDQyNb7Kjge30vXeFdbGFeRhxC9GDNAf8q3vzK2iNnzQhv1oaz7m09Fwma0nfiRJkdW4JyOFEntSfDpqnaJbga5cYLR0CH_oAqGuB-l3joSvlUAqEwJM004AtQqaJ8yFTjwDCy4nrTJLhz1uv6I6iuG8BNMrYSJTiTIGzvGj_7ZLV45GklPruae4_WmtkjTTX1XTU_q49_gSSsghFSeNFBLcwGOmWZ0NazmhcjHndOECwOCpBR5e3-iEiaaIeaiyjEgPrJfkswkPpquqmo02pth3TvusCQCzQ24UPvFwK-yoU5apsey8hABdiSNGQHSuAv1pMsN6dvhDs9VT7Bi_Nk9rQiXNLXGivGEADWbFC1UPZ9AdUJwZij5XKsa_rIeq0iEedETskF1BudbLgsTLtl6kuO1obZBspMSNFCJS3jUZr3Dtk1SIRb34puzhdVKexT9xgDqq9FQyhsoOzlECaOc0czqG3ekSmNhdwd0vK6sj03GQn4IRYN-0dHPbpZ4VYT8_IUSCzfbtRZ6YFs9Vw2wXfs8enn37Qp0o3JDk7_EkyYTE6hC13vSYIDsvvZH2tBkxSZzVRhXoHTxxdeHqzqSDYAGSJTpz5cZIWS6OeVaKuefjtQEAE99Iu6DOFY3ptmrEjSiGIsG0_cigdDILlMo9DpGkVMLtmNO0_KJ4RAjC8iVD9zGt2C_ljJGOcXUC6fUuqfpL2YKERenzZjVudo8Aifb_rla8Xh-TFA266h-JqqZ0VmuPCKHwZfx7W9a40odqd8Way-HNPLmZDPpJBu5Q3Fr_5mrfzZotWHn9iwBUjbhUaJeCFE8w9LcIMCyW-EmGkTiAvPBHwCBKzP8Dy2bKEphFJ-JLDalkBl8x7Cg-uyKQQhyhbGYwjcLsV-HU9TASsxjryMpyOT3u0J_xI_wZQ2-T5kdTHQmBu8adHBOSS00vEnYFhrx3OHJuqni8_egAa3DiG1SLiMz-S=w878-h718-no?authuser=0)
+
+
 
 
 ## Autores
